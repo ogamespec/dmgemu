@@ -47,6 +47,13 @@ make
 
 If something doesn't work, you do it. You have red eyes for a reason. :penguin:
 
+## Build for NetBSD
+
+In general, the build does not differ from the Linux build, but there are some minor peculiarities:
+- You need to use `gmake` instead of `make`
+- In CMakeLists.txt you need to add the `link_libraries(/usr/pkg/lib)` directive
+- In the pch.h header, change the path to the SDL2.h header: `#include </usr/pkg/include/SDL2/SDL2.h>`
+
 ## Some screenshots
 
 ![whc4e0b23f6744b0](/imgstore/whc4e0b23f6744b0.png)

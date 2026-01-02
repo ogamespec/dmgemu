@@ -67,7 +67,7 @@ void tilecache_init(void) {
 static uint8_t* getcell(unsigned celln,unsigned dir) {
 	uint8_t*dest=tilecachedata+((dir&0x40)<<9)+(celln<<6),*rp;
 	uint32_t*wp;
-	register unsigned b0,b1;
+	unsigned b0,b1;
 	unsigned i;
 	if(!(tilecache[celln]&dir)) {
 		tilecache[celln]|=dir;

@@ -51,7 +51,7 @@ void check4LCDint(unsigned mode) { // Also called from mem.c!!
 	//lcd_int_on = lcd_int_on_new;
 }
 void check4LYC(void) {  // Also called from mem.c!!
-	register unsigned stnew = R_STAT&~4;
+	unsigned stnew = R_STAT&~4;
 	if(R_LYC == R_LY) {
 		stnew|=4;
 		if(R_STAT < stnew)

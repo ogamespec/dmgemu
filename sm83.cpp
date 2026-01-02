@@ -300,7 +300,7 @@ uint8_t tmp8;
 unsigned tmp32;
 if(HALT) {gb_clk=clk_nextevent;return;}//clkmax;}
 while(gb_clk<clk_nextevent) {
-		register unsigned opcode;
+		unsigned opcode;
 		unsigned core_clk;
 		opcode = FETCH();
 		core_clk = base_clk_t[opcode];

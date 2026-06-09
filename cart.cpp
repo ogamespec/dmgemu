@@ -97,7 +97,8 @@ void check_ROM_header()
 	if (!findsz(&(cart.ram_size), RAM_SIZES, romhdr->ramsize))
 		sys_error("Unknown RAM size");
 	do_header_chk(0);
-	memcpy(cart.title, romhdr->title, 15);
+	memcpy(cart.title, romhdr->title, sizeof(romhdr->title));
+	cart.title[sizeof(romhdr->title)] = '\0';
 	//    do_global_chk(1);
 }
 

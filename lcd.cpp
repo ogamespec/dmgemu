@@ -43,7 +43,7 @@ void sdl_win_init(int width, int height)
 	}
 
 	char title[128];
-	sprintf(title, "GameBoy - %s", romhdr->title);
+	sprintf(title, "GameBoy - %s", cart.title);
 
 	SDL_Window* window = SDL_CreateWindow(
 		title,
